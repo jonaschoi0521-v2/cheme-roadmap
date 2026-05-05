@@ -1,0 +1,626 @@
+/* ChemE Roadmap stylesheet — extends blog aesthetic.
+   Same token values; adds dashboard-specific patterns. */
+
+:root {
+  --bg:        #F5F1EB;
+  --ink:       #2C2A26;
+  --muted:     #6B6660;
+  --rule:      #D9D2C7;
+  --accent:    #CC785C;
+  --accent-dk: #A85B40;
+  --green:     #2D6A4F;
+  --green-bg:  #E8F4EC;
+  --amber:     #8B5000;
+  --amber-bg:  #FFF3E0;
+  --purple:    #6B46C1;
+  --purple-bg: #F5F0FF;
+
+  --serif: Charter, "Iowan Old Style", "Source Serif Pro", "Source Serif 4",
+           "Times New Roman", Georgia, serif;
+  --sans:  -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue",
+           Arial, sans-serif;
+  --mono:  ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --content-width: 900px;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Layout ── */
+
+.wrap {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+header.site {
+  padding: 24px 0 20px;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 40px;
+}
+
+header.site .row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+header.site .title {
+  font-family: var(--serif);
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+header.site .subtitle {
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+  margin-left: 8px;
+}
+
+header.site nav {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+header.site nav a {
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+header.site nav a:hover { color: var(--accent); }
+header.site nav a.active { color: var(--accent); font-weight: 600; }
+
+footer.site {
+  margin-top: 80px;
+  padding: 24px 0 40px;
+  border-top: 1px solid var(--rule);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ── Page title ── */
+
+.page-title {
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin: 0 0 6px;
+}
+
+.page-subtitle {
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0 0 40px;
+}
+
+/* ── Mission banner ── */
+
+.mission {
+  background: rgba(204, 120, 92, 0.07);
+  border-left: 3px solid var(--accent);
+  padding: 12px 16px;
+  border-radius: 0 4px 4px 0;
+  margin-bottom: 40px;
+  font-family: var(--serif);
+  font-style: italic;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* ── Section headers ── */
+
+.section-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--rule);
+}
+
+/* ── Progress bars ── */
+
+.progress-group {
+  margin-bottom: 32px;
+}
+
+.progress-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.progress-label {
+  font-size: 13px;
+  color: var(--ink);
+  min-width: 200px;
+}
+
+.progress-track {
+  flex: 1;
+  background: var(--rule);
+  border-radius: 4px;
+  height: 8px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background: var(--accent);
+  height: 8px;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.progress-fill.complete { background: var(--green); }
+
+.progress-count {
+  font-size: 12px;
+  color: var(--muted);
+  min-width: 60px;
+  text-align: right;
+}
+
+/* ── Status badges ── */
+
+.badge {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 12px;
+  letter-spacing: 0.03em;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.badge-completed, .badge-accepted    { background: var(--green-bg); color: var(--green); }
+.badge-active, .badge-in-progress    { background: var(--amber-bg); color: var(--amber); }
+.badge-planned, .badge-identified    { background: #F0F0F0; color: var(--muted); }
+.badge-paused, .badge-ideation       { background: var(--purple-bg); color: var(--purple); }
+.badge-waived, .badge-withdrawn      { background: #F0F0F0; color: var(--muted); font-style: italic; }
+.badge-contacted                     { background: #E3F2FD; color: #1565C0; }
+.badge-meeting-scheduled             { background: var(--amber-bg); color: var(--amber); }
+.badge-active-relationship           { background: var(--green-bg); color: var(--green); }
+.badge-cold                          { background: #F0F0F0; color: var(--muted); }
+.badge-drafting                      { background: var(--purple-bg); color: var(--purple); }
+.badge-submitted                     { background: #E3F2FD; color: #1565C0; }
+.badge-interviewing                  { background: var(--amber-bg); color: var(--amber); }
+.badge-offered                       { background: var(--green-bg); color: var(--green); }
+.badge-rejected                      { background: #FEE2E2; color: #991B1B; }
+.badge-abandoned                     { background: #F0F0F0; color: var(--muted); font-style: italic; }
+
+/* ── Dashboard stat cards ── */
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.stat-card {
+  background: white;
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.stat-card .stat-number {
+  font-family: var(--serif);
+  font-size: 32px;
+  font-weight: 600;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.stat-card .stat-label {
+  font-size: 12px;
+  color: var(--muted);
+  letter-spacing: 0.03em;
+}
+
+/* ── Cards (projects, internships) ── */
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.card {
+  border: 1px solid var(--rule);
+  border-radius: 8px;
+  padding: 18px 20px;
+  flex: 1;
+  min-width: 240px;
+  background: white;
+}
+
+.card-title {
+  font-family: var(--serif);
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 6px;
+  letter-spacing: -0.01em;
+}
+
+.card-meta {
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.card-mission {
+  font-size: 13px;
+  color: var(--muted);
+  font-style: italic;
+  margin-top: 8px;
+}
+
+/* ── Tables ── */
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-bottom: 32px;
+}
+
+.data-table th {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 8px 12px;
+  border-bottom: 2px solid var(--rule);
+}
+
+.data-table td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: middle;
+}
+
+.data-table th:nth-child(3),
+.data-table td:nth-child(3) { text-align: right; white-space: nowrap; }
+
+.data-table th:nth-child(4),
+.data-table td:nth-child(4) { text-align: center; }
+
+.data-table th:nth-child(5),
+.data-table td:nth-child(5) { text-align: center; }
+
+.data-table tr:last-child td { border-bottom: none; }
+.data-table tr:hover td { background: rgba(204, 120, 92, 0.04); }
+
+.data-table .course-name {
+  font-weight: 500;
+  color: var(--ink);
+}
+
+.data-table .fulfills {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* ── Timeline (horizontal, CSS grid) ── */
+
+.timeline-wrap {
+  overflow-x: auto;
+  margin-bottom: 40px;
+  padding-bottom: 8px;
+}
+
+.timeline {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(120px, 1fr);
+  gap: 0;
+  min-width: 800px;
+}
+
+.timeline-col {
+  padding: 16px 12px;
+  border-left: 1px solid var(--rule);
+  min-height: 180px;
+}
+
+.timeline-col:first-child { border-left: none; }
+
+.timeline-col.milestone {
+  border-left: 2px solid var(--accent);
+  background: rgba(204, 120, 92, 0.05);
+}
+
+.timeline-col.now {
+  border-left: 2px solid var(--accent);
+}
+
+.timeline-sem-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+
+.timeline-season {
+  font-size: 12px;
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.timeline-note {
+  font-size: 12px;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 8px;
+}
+
+.timeline-courses {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline-courses li {
+  font-size: 11px;
+  color: var(--ink);
+  padding: 2px 0;
+  border-left: 2px solid var(--rule);
+  padding-left: 6px;
+  margin-bottom: 2px;
+}
+
+.timeline-courses li.status-completed { border-color: var(--green); color: var(--green); }
+.timeline-courses li.status-in-progress { border-color: var(--accent); }
+.timeline-courses li.status-planned { border-color: var(--rule); color: var(--muted); }
+
+/* ── Research pipeline ── */
+
+.pipeline-counts {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.pipeline-count {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.pipeline-count strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* ── Upcoming deadlines ── */
+
+.deadline-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+}
+
+.deadline-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--rule);
+  font-size: 13px;
+}
+
+.deadline-list li:last-child { border-bottom: none; }
+
+.deadline-days {
+  font-weight: 600;
+  color: var(--accent);
+  min-width: 60px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.deadline-days.urgent { color: #991B1B; }
+
+.deadline-name { color: var(--ink); flex: 1; }
+.deadline-org  { color: var(--muted); font-size: 12px; }
+
+/* ── Empty state ── */
+
+.empty {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 13px;
+  padding: 16px 0;
+}
+
+/* ── Section divider ── */
+
+.section { margin-bottom: 48px; }
+
+/* ── Registration page ── */
+
+.reg-notes {
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  padding: 14px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.reg-note {
+  font-size: 12px;
+  color: var(--muted);
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.reg-mark {
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  color: var(--accent);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.reg-conf {
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: #2D6A4F;
+}
+
+.reg-sem-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.reg-sem-label {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--ink);
+  margin-right: 12px;
+}
+
+.reg-sem-season {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.reg-table .reg-markers {
+  font-family: "Courier New", monospace;
+  font-size: 11px;
+  white-space: nowrap;
+  color: var(--muted);
+  vertical-align: middle;
+}
+
+.reg-table .reg-code {
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  color: var(--ink);
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.reg-table .reg-credits {
+  text-align: left;
+  font-family: "Courier New", monospace;
+  font-size: 12px;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.reg-table tr.reg-companion td {
+  color: var(--muted);
+  font-size: 12px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border-bottom: none;
+}
+
+.reg-table tr.reg-skip td {
+  color: var(--muted);
+  text-decoration: line-through;
+  font-size: 12px;
+}
+
+.reg-skip-label {
+  font-size: 11px;
+  color: var(--muted);
+  font-style: italic;
+  text-decoration: none;
+  display: inline-block;
+  margin-left: 6px;
+}
+
+.reg-or {
+  color: var(--muted);
+  font-style: italic;
+  font-size: 11px;
+}
+
+.reg-table td { border-bottom: none; }
+
+.reg-table th:nth-child(3),
+.reg-table td:nth-child(3) { text-align: left; white-space: normal; }
+
+.reg-table th:nth-child(4),
+.reg-table td:nth-child(4) { text-align: left; }
+
+.reg-table tr.reg-total td {
+  font-weight: 600;
+  font-size: 13px;
+  border-top: 2px solid var(--rule);
+  border-bottom: none;
+  padding-top: 8px;
+  color: var(--ink);
+}
+
+.reg-table tr.reg-total td:last-child {
+  text-align: left;
+  font-family: "Courier New", monospace;
+}
+
+.reg-transfer {
+  background: rgba(204, 120, 92, 0.08);
+  border: 1px solid rgba(204, 120, 92, 0.3);
+  border-left: 3px solid var(--accent);
+  border-radius: 4px;
+  padding: 12px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
+/* ── Small screens ── */
+
+@media (max-width: 640px) {
+  body { font-size: 14px; }
+  .wrap { padding: 0 16px; }
+  .page-title { font-size: 24px; }
+  .stat-grid { grid-template-columns: repeat(2, 1fr); }
+  .progress-label { min-width: 140px; font-size: 12px; }
+  header.site nav { gap: 12px; }
+}
