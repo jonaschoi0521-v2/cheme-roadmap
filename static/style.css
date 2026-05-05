@@ -565,6 +565,10 @@ footer.site {
   font-size: 12px;
 }
 
+.reg-table tr.reg-skip td.reg-markers {
+  text-decoration: none;
+}
+
 .reg-skip-label {
   font-size: 11px;
   color: var(--muted);
