@@ -618,6 +618,69 @@ footer.site {
   letter-spacing: 0.02em;
 }
 
+/* ── About page ── */
+
+.about-hero {
+  padding: 64px 0 48px;
+  margin-bottom: 0;
+}
+
+.about-name {
+  font-size: 40px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+
+.about-tagline {
+  font-size: 15px;
+  color: var(--muted);
+  margin: 0 0 32px;
+}
+
+.about-motto {
+  font-size: 17px;
+  font-style: italic;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.about-section {
+  margin-bottom: 48px;
+}
+
+.about-section p {
+  margin: 16px 0 0;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.about-achievements {
+  margin: 16px 0 0;
+  padding-left: 20px;
+}
+
+.about-achievements li {
+  margin-bottom: 14px;
+  line-height: 1.7;
+  font-size: 15px;
+}
+
+.about-cta {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+.about-cta:hover {
+  color: var(--accent-dk);
+}
+
 /* ── Small screens ── */
 
 @media (max-width: 640px) {
