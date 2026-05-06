@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% set active_page = "projects" %}
+{% set static_prefix = "" %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<div class="section">
+  <h1 class="page-title">Projects</h1>
+  <p class="page-subtitle">Research, class, and personal project log</p>
+</div>
+
+{% set active = projects | selectattr("status", "in", ["active", "ideation"]) | list %}
+{% set completed = projects | selectattr("status", "equalto", "completed") | list %}
+{% set paused = projects | selectattr("status", "in", ["paused", "abandoned"]) | list %}
+
+{% if active %}
+<div class="section">
+  <div class="section-label">Active ({{ active | length }})</div>
+  <div class="cards">
+    {% for p in active %}
+    <div class="card">
+      <div class="card-title">{{ p.title }}</div>
+      <div class="card-meta">
+        <span class="badge badge-{{ p.status }}">{{ p.status }}</span>
+        &nbsp;
+        <span class="badge badge-{{ p.type }}">{{ p.type }}</span>
+        &nbsp;Started {{ p.started }}
+        {% if p.log_count %}&nbsp;&middot; {{ p.log_count }} entries{% endif %}
+      </div>
+      {% if p.mission %}
+      <div class="card-mission">{{ p.mission }}</div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+
+{% if completed %}
+<div class="section">
+  <div class="section-label">Completed ({{ completed | length }})</div>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Project</th>
+        <th>Type</th>
+        <th>Started</th>
+        <th>Completed</th>
+        <th>Entries</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for p in completed %}
+      <tr>
+        <td class="course-name">{{ p.title }}</td>
+        <td><span class="badge badge-{{ p.type }}">{{ p.type }}</span></td>
+        <td>{{ p.started }}</td>
+        <td>{{ p.completed }}</td>
+        <td>{{ p.log_count }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endif %}
+
+{% if paused %}
+<div class="section">
+  <div class="section-label">Paused / Abandoned</div>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Project</th>
+        <th>Type</th>
+        <th>Status</th>
+        <th>Started</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for p in paused %}
+      <tr>
+        <td class="course-name">{{ p.title }}</td>
+        <td>{{ p.type }}</td>
+        <td><span class="badge badge-{{ p.status }}">{{ p.status }}</span></td>
+        <td>{{ p.started }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endif %}
+
+{% if not projects %}
+<div class="section">
+  <p class="empty">No projects yet. Start one with:</p>
+  <pre style="font-size:13px; background:#2C2A26; color:#F5F1EB; padding:12px 16px; border-radius:4px;">python3 tools/new_entry.py project "your project name"</pre>
+</div>
+{% endif %}
+{% endblock %}

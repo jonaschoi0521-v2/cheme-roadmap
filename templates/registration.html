@@ -1,0 +1,348 @@
+{% extends "base.html" %}
+{% set active_page = "registration" %}
+{% set static_prefix = "" %}
+
+{% block title %}Registration{% endblock %}
+
+{% block content %}
+<div class="section">
+  <h1 class="page-title">Course Registration</h1>
+  <p class="page-subtitle">Semesters I–IV confirmed &middot; Semesters V–VIII in planning</p>
+</div>
+
+<!-- Footnotes -->
+<div class="section">
+  <div class="section-label">Notes</div>
+  <div class="reg-notes">
+    <div class="reg-note"><span class="reg-conf">c</span> &nbsp;Corequisite</div>
+    <div class="reg-note"><span class="reg-mark">*</span> &nbsp;Check whether not taking Calculus is acceptable for SEAS transfer</div>
+    <div class="reg-note"><span class="reg-mark">**</span> &nbsp;Petition for skipping prerequisite &amp; corequisite</div>
+    <div class="reg-note"><span class="reg-mark">***</span> &nbsp;Petition to take in Fall 2026</div>
+    <div class="reg-note"><span class="reg-mark">****</span> &nbsp;Inquire to take in Spring 2027</div>
+    <div class="reg-note"><span class="reg-mark">*****</span> &nbsp;Petition for skipping</div>
+  </div>
+</div>
+
+<!-- Semester I -->
+<div class="section">
+  <div class="reg-sem-header">
+    <span class="reg-sem-label">Semester I <span class="reg-mark">*</span></span>
+    <span class="reg-sem-season">Fall 2026</span>
+  </div>
+  <table class="data-table reg-table">
+    <colgroup>
+      <col style="width:8%">
+      <col style="width:18%">
+      <col style="width:62%">
+      <col style="width:12%">
+    </colgroup>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Code</th>
+        <th>Course</th>
+        <th>Credits</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="reg-markers"><span class="reg-conf">c</span> <span class="reg-mark">**</span></td>
+        <td class="reg-code">CHEM UN2045</td>
+        <td>Intensive Organic Chemistry</td>
+        <td class="reg-credits">4.00</td>
+      </tr>
+      <tr class="reg-companion">
+        <td class="reg-markers"><span class="reg-conf">c</span></td>
+        <td class="reg-code">CHEM UN2445</td>
+        <td>Organic Chemistry — Recitation</td>
+        <td class="reg-credits">0.00</td>
+      </tr>
+      <tr>
+        <td class="reg-markers"><span class="reg-mark">***</span></td>
+        <td class="reg-code">ENGL CC1010</td>
+        <td>University Writing</td>
+        <td class="reg-credits">3.00</td>
+      </tr>
+      <tr>
+        <td class="reg-markers"></td>
+        <td class="reg-code">HUMA CC1001</td>
+        <td>Literature Humanities I</td>
+        <td class="reg-credits">4.00</td>
+      </tr>
+      <tr>
+        <td class="reg-markers"></td>
+        <td class="reg-code">KORN UN1001</td>
+        <td>Introductory Korean A</td>
+        <td class="reg-credits">2.50</td>
+      </tr>
+      <tr>
+        <td class="reg-markers"><span class="reg-mark">**</span></td>
+        <td class="reg-code">PHYS UN1401</td>
+        <td>Intro to Mechanics &amp; Thermodynamics</td>
+        <td class="reg-credits">3.00</td>
+      </tr>
+      <tr class="reg-total">
+        <td>Total</td><td></td><td></td>
+        <td class="reg-credits">16.50</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Semester II -->
+<div class="section">
+  <div class="reg-sem-header">
+    <span class="reg-sem-label">Semester II</span>
+    <span class="reg-sem-season">Spring 2027</span>
+  </div>
+  <table class="data-table reg-table">
+    <colgroup>
+      <col style="width:8%">
+      <col style="width:18%">
+      <col style="width:62%">
+      <col style="width:12%">
+    </colgroup>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Code</th>
+        <th>Course</th>
+        <th>Credits</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="reg-markers"><span class="reg-conf">c</span></td>
+        <td class="reg-code">APMA E2000</td>
+        <td>Multivariable Calculus for Engineering &amp; Applied Science</td>
+        <td class="reg-credits">4.00</td>
+      </tr>
+      <tr class="reg-companion">
+        <td class="reg-markers"><span class="reg-conf">c</span></td>
+        <td class="reg-code">APMA E2001</td>
+        <td>Multivariable Calculus — Recitation</td>
+        <td class="reg-credits">0.00</td>
+      </tr>
+      <tr>
+        <td class="reg-markers"><span class="reg-conf">c</span> <span class="reg-mark">****</span></td>
+        <td class="reg-code">CHEM UN1507</td>
+        <td>Intensive General Chemistry Lab</td>
+        <td class="reg-credits">3.00</td>
+      </tr>
+      <tr>
+        <td class="reg-markers"><span class="reg-conf">c</span></td>
+        <td class="reg-code">CHEM UN2046</td>
+        <td>Intensive Organic Chemistry for 1st Year</td>
+        <td class="reg-credits">4.00</td>
+      </tr>
+      <tr class="reg-companion">
+        <td class="reg-markers"><span class="reg-conf">c</span></td>
+        <td class="reg-code">CHEM UN2446</td>
+        <td>Organic Chemistry — Recitation</td>
+        <td class="reg-credits">0.00</td>
+      </tr>
+      <tr>
+        <td class="reg-markers"></td>
+        <td class="reg-code">HUMA CC1002</td>
+        <td>Literature Humanities II</td>
+        <td class="reg-credits">4.00</td>
+      </tr>
+      <tr>
+        <td class="reg-markers"></td>
+        <td class="reg-code">KORN UN1002</td>
+        <td>Introductory Korean B</td>
+        <td class="reg-credits">2.50</td>
+      </tr>
+      <tr>
+        <td class="reg-markers"><span class="reg-mark">**</span></td>
+        <td class="reg-code">PHYS UN1402</td>
+        <td>Intro to Electricity, Magnetism &amp; Optics</td>
+        <td class="reg-credits">3.00</td>
+      </tr>
+      <tr class="reg-skip">
+        <td class="reg-markers"><span class="reg-mark">*****</span></td>
+        <td class="reg-code">SCNC CC1000</td>
+        <td>Frontiers of Science <span class="reg-skip-label">not taking</span></td>
+        <td class="reg-credits">—</td>
+      </tr>
+      <tr class="reg-skip reg-companion">
+        <td class="reg-markers"><span class="reg-mark">*****</span></td>
+        <td class="reg-code">SCNC CC1100</td>
+        <td>Frontiers of Science — Discussion <span class="reg-skip-label">not taking</span></td>
+        <td class="reg-credits">—</td>
+      </tr>
+      <tr class="reg-total">
+        <td>Total</td><td></td><td></td>
+        <td class="reg-credits">20.50</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Transfer Banner -->
+<div class="section">
+  <div class="reg-transfer">
+    ↑ &nbsp;Internal Transfer to SEAS Chemical Engineering &nbsp;·&nbsp; Spring 2027
+  </div>
+</div>
+
+<!-- Semester III -->
+<div class="section">
+  <div class="reg-sem-header">
+    <span class="reg-sem-label">Semester III</span>
+    <span class="reg-sem-season">Fall 2027</span>
+  </div>
+  <table class="data-table reg-table">
+    <colgroup>
+      <col style="width:8%">
+      <col style="width:18%">
+      <col style="width:62%">
+      <col style="width:12%">
+    </colgroup>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Code</th>
+        <th>Course</th>
+        <th>Credits</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="reg-companion">
+        <td class="reg-markers"><span class="reg-conf">c</span></td>
+        <td class="reg-code">APMA E2000</td>
+        <td>Multivariable Calculus <span class="reg-skip-label">backup</span></td>
+        <td class="reg-credits">4.00</td>
+      </tr>
+      <tr class="reg-companion">
+        <td class="reg-markers"><span class="reg-conf">c</span></td>
+        <td class="reg-code">APMA E2001</td>
+        <td>Multivariable Calculus — Recitation <span class="reg-skip-label">backup</span></td>
+        <td class="reg-credits">0.00</td>
+      </tr>
+      <tr>
+        <td class="reg-markers"></td>
+        <td class="reg-code">APMA E3101</td>
+        <td>Applied Mathematics I: Linear Algebra</td>
+        <td class="reg-credits">3.00</td>
+      </tr>
+      <tr>
+        <td class="reg-markers"><span class="reg-conf">c</span></td>
+        <td class="reg-code">BIOL UN2005</td>
+        <td>Intro to Biology I: Biochemistry, Genetics &amp; Molecular Biology</td>
+        <td class="reg-credits">4.00</td>
+      </tr>
+      <tr class="reg-companion">
+        <td class="reg-markers"><span class="reg-conf">c</span></td>
+        <td class="reg-code">BIOL UN2015</td>
+        <td>Intro to Biology I — Recitation</td>
+        <td class="reg-credits">0.00</td>
+      </tr>
+      <tr>
+        <td class="reg-markers"></td>
+        <td class="reg-code">CHEN E1000</td>
+        <td>Chemical Engineering for Humanity</td>
+        <td class="reg-credits">1.00</td>
+      </tr>
+      <tr>
+        <td class="reg-markers"></td>
+        <td class="reg-code">ENGI E1006</td>
+        <td>Intro to Computing for Engineering &amp; Applied Science</td>
+        <td class="reg-credits">3.00</td>
+      </tr>
+      <tr>
+        <td class="reg-markers"></td>
+        <td class="reg-code">ENGI E1102</td>
+        <td>The Art of Engineering</td>
+        <td class="reg-credits">4.00</td>
+      </tr>
+      <tr>
+        <td class="reg-markers"></td>
+        <td class="reg-code">PHYS UN1494</td>
+        <td>Intro to Experimental Physics Lab</td>
+        <td class="reg-credits">3.00</td>
+      </tr>
+      <tr class="reg-total">
+        <td>Total</td><td></td><td></td>
+        <td class="reg-credits">18.00</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Semester IV -->
+<div class="section">
+  <div class="reg-sem-header">
+    <span class="reg-sem-label">Semester IV</span>
+    <span class="reg-sem-season">Spring 2028</span>
+  </div>
+  <table class="data-table reg-table">
+    <colgroup>
+      <col style="width:8%">
+      <col style="width:18%">
+      <col style="width:62%">
+      <col style="width:12%">
+    </colgroup>
+    <thead>
+      <tr>
+        <th></th>
+        <th>Code</th>
+        <th>Course</th>
+        <th>Credits</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="reg-markers"></td>
+        <td class="reg-code">APMA E2101 <span class="reg-or">or</span> MATH UN2030</td>
+        <td>Intro to Applied Mathematics <span class="reg-or">or</span> Ordinary Differential Equations</td>
+        <td class="reg-credits">3.00</td>
+      </tr>
+      <tr>
+        <td class="reg-markers"><span class="reg-conf">c</span></td>
+        <td class="reg-code">BIOL UN2006</td>
+        <td>Intro to Biology II: Cell Biology, Development &amp; Physiology</td>
+        <td class="reg-credits">4.00</td>
+      </tr>
+      <tr class="reg-companion">
+        <td class="reg-markers"><span class="reg-conf">c</span></td>
+        <td class="reg-code">BIOL UN2016</td>
+        <td>Intro to Biology II — Recitation</td>
+        <td class="reg-credits">0.00</td>
+      </tr>
+      <tr>
+        <td class="reg-markers"><span class="reg-conf">c</span></td>
+        <td class="reg-code">CHEM UN3079</td>
+        <td>Physical Chemistry I — Lectures</td>
+        <td class="reg-credits">4.00</td>
+      </tr>
+      <tr>
+        <td class="reg-markers"><span class="reg-conf">c</span></td>
+        <td class="reg-code">CHEM UN3085</td>
+        <td>Physical-Analytical Laboratory I</td>
+        <td class="reg-credits">4.00</td>
+      </tr>
+      <tr>
+        <td class="reg-markers"></td>
+        <td class="reg-code">CHEN E2100</td>
+        <td>Material and Energy Balances</td>
+        <td class="reg-credits">3.00</td>
+      </tr>
+      <tr>
+        <td class="reg-markers"></td>
+        <td class="reg-code">CHEN E3020</td>
+        <td>Analysis of Chemical Engineering Problems</td>
+        <td class="reg-credits">3.00</td>
+      </tr>
+      <tr class="reg-total">
+        <td>Total</td><td></td><td></td>
+        <td class="reg-credits">21.00</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="section">
+  <p class="empty" style="font-style:italic;">Semesters V–VIII are in planning — registration not yet determined.</p>
+</div>
+{% endblock %}

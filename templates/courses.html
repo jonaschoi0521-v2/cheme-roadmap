@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% set active_page = "courses" %}
+{% set static_prefix = "" %}
+
+{% block title %}Courses{% endblock %}
+
+{% block content %}
+<div class="section">
+  <h1 class="page-title">Courses</h1>
+  <p class="page-subtitle">Organized by subject — Semester I (Fall 2026) through Semester VIII (Spring 2030)</p>
+  <p class="page-subtitle"><strong>{{ total_credits | int if total_credits == total_credits | int else total_credits }}</strong> total credits across all courses</p>
+</div>
+
+{% for subject in subject_order %}
+  {% set group = courses | selectattr("subject", "equalto", subject) | sort(attribute="semester_order") | list %}
+  {% if group %}
+  <div class="section">
+    <div class="section-label">{{ subject }}</div>
+    <table class="data-table">
+      <colgroup>
+        <col style="width:44%">
+        <col style="width:22%">
+        <col style="width:8%">
+        <col style="width:18%">
+        <col style="width:8%">
+      </colgroup>
+      <thead>
+        <tr>
+          <th>Course</th>
+          <th>Semester</th>
+          <th>Credits</th>
+          <th>Status</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for c in group %}
+        <tr>
+          <td>
+            <div class="course-name">{{ c.title }}</div>
+            {% if c.fulfills %}
+            <div class="fulfills">{{ c.fulfills }}</div>
+            {% endif %}
+          </td>
+          <td style="white-space:nowrap; font-size:12px; color:var(--muted);">{{ c.semester }}</td>
+          <td style="font-size:13px;">{{ c.credits }}</td>
+          <td><span class="badge badge-{{ c.status | replace(' ', '-') }}">{{ c.status }}</span></td>
+          <td style="font-size:13px;">{{ c.grade }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% endif %}
+{% endfor %}
+{% endblock %}

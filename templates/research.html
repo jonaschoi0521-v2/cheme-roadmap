@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% set active_page = "research" %}
+{% set static_prefix = "" %}
+
+{% block title %}Research{% endblock %}
+
+{% block content %}
+<div class="section">
+  <h1 class="page-title">Research</h1>
+  <p class="page-subtitle">Professors and labs</p>
+</div>
+
+<!-- Professors & Labs -->
+<div class="section">
+  <div class="section-label">Professors & Labs ({{ researchers | length }})</div>
+  {% if researchers %}
+  <div class="pipeline-counts">
+    {% set statuses = researchers | map(attribute='status') | list %}
+    {% for s in ["identified", "contacted", "meeting-scheduled", "active-relationship", "cold"] %}
+      {% set count = statuses | select("equalto", s) | list | length %}
+      {% if count > 0 %}
+      <div class="pipeline-count">
+        <strong>{{ count }}</strong> {{ s | replace('-', ' ') }}
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Institution / Lab</th>
+        <th>Focus Areas</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for r in researchers %}
+      <tr>
+        <td class="course-name">{{ r.title }}</td>
+        <td class="fulfills">{{ r.institution }}{% if r.lab %}<br><em>{{ r.lab }}</em>{% endif %}</td>
+        <td class="fulfills">{{ r.focus }}</td>
+        <td><span class="badge badge-{{ r.status | replace(' ', '-') }}">{{ r.status | replace('-', ' ') }}</span></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p class="empty">No researchers tracked yet. Add one with: <code>python3 tools/new_entry.py researcher "Name institution"</code></p>
+  {% endif %}
+</div>
+{% endblock %}

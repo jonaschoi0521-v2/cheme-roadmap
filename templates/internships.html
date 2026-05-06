@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% set active_page = "internships" %}
+{% set static_prefix = "" %}
+
+{% block title %}Opportunities{% endblock %}
+
+{% block content %}
+<div class="section">
+  <h1 class="page-title">Opportunities</h1>
+  <p class="page-subtitle">Internships, fellowships, REUs, and awards</p>
+</div>
+
+{% set statuses_ordered = ["identified", "drafting", "submitted", "interviewing", "offered", "accepted", "rejected", "withdrawn"] %}
+
+<!-- Upcoming deadlines -->
+{% set upcoming = internships | selectattr("days_until", "ne", None) | selectattr("days_until", "ge", 0) | list %}
+{% if upcoming %}
+<div class="section">
+  <div class="section-label">Upcoming Deadlines</div>
+  <ul class="deadline-list">
+    {% for item in upcoming | sort(attribute="days_until") %}
+    <li>
+      <span class="deadline-days {% if item.days_until <= 7 %}urgent{% endif %}">
+        {% if item.days_until == 0 %}TODAY
+        {% elif item.days_until == 1 %}1 day
+        {% else %}{{ item.days_until }} days{% endif %}
+      </span>
+      <span class="deadline-name">{{ item.title }}</span>
+      <span class="deadline-org">
+        {{ item.org }}
+        &middot; <span class="badge badge-{{ item.status }}">{{ item.status }}</span>
+      </span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endif %}
+
+<!-- All opportunities by status -->
+<div class="section">
+  <div class="section-label">All Opportunities ({{ internships | length }})</div>
+  {% if internships %}
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Opportunity</th>
+        <th>Organization</th>
+        <th>Type</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in internships %}
+      <tr>
+        <td class="course-name">{{ item.title }}</td>
+        <td>{{ item.org }}</td>
+        <td>{{ item.type }}</td>
+        <td><span class="badge badge-{{ item.status }}">{{ item.status }}</span></td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p class="empty">No opportunities tracked yet. Add one with: <code>python3 tools/new_entry.py internship "Org Role Year"</code></p>
+  {% endif %}
+</div>
+{% endblock %}

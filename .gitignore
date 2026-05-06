@@ -1,0 +1,12 @@
+site/
+.tmp/
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+venv/
+.env
+
+# Private folders — never push
+/research/
+/private/
