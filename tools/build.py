@@ -343,6 +343,7 @@ def main() -> int:
         ("projects.html", "projects.html", {"projects": projects}),
         ("research.html", "research.html", {"researchers": researchers, "learning": learning}),
         ("internships.html", "internships.html", {"internships": internships}),
+        ("advice.html", "advice.html", {}),
     ]
 
     for template_name, out_name, ctx in pages:
