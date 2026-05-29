@@ -78,6 +78,11 @@ Wait ~1 min, then check https://jonaschoi0521-v2.github.io/cheme-roadmap
 - **Deploy action:** `peaceiris/actions-gh-pages@v3` → pushes `site/` to `gh-pages` branch
 - **Pages source:** Deploy from branch → `gh-pages`, `/ (root)`
 
+## Constraints
+
+- **Visa:** F-1 international student — eliminates Goldwater, NSF GRFP, Churchill, Hertz, and most US-only fellowships when tracking opportunities
+- **Presidential Scholarship:** sole-scholarship clause — no additional scholarships; fellowships, prizes, competitions, and research grants are fine
+
 ## Rules
 
 1. **"Active projects: 0" is correct behavior** when all projects are in `ideation` status — not a bug. Update status to `active` when work actually begins.

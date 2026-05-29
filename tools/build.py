@@ -289,6 +289,52 @@ ROADMAP_SEMESTERS = [
 ]
 
 
+# ── Milestone data ────────────────────────────────────────────────────────────
+
+MILESTONES = [
+    {
+        "phase": "20s",
+        "name": "Hello Tomorrow Deep Tech Challenge",
+        "signal": "First global deep tech founder recognition",
+    },
+    {
+        "phase": "20s",
+        "name": "Y Combinator (acceptance)",
+        "signal": "Top-tier startup validation, global",
+    },
+    {
+        "phase": "20s",
+        "name": "Forbes 30 Under 30",
+        "signal": "Mainstream visibility, entrepreneurship/science",
+    },
+    {
+        "phase": "30s",
+        "name": "MacArthur \"Genius\" Grant",
+        "signal": "$800K, no strings. Signals genuinely original work. They find you — you can't apply",
+    },
+    {
+        "phase": "30s",
+        "name": "MIT TR35 (Innovators Under 35)",
+        "signal": "The science/tech world's Forbes, but harder",
+    },
+    {
+        "phase": "30s",
+        "name": "POSCO TJ Park Prize",
+        "signal": "Top Korean-heritage scientist recognition, globally respected",
+    },
+    {
+        "phase": "30s",
+        "name": "TIME 100",
+        "signal": "Global cultural/leadership recognition at scale",
+    },
+    {
+        "phase": "30s",
+        "name": "TED main stage invitation",
+        "signal": "Platform milestone — your idea is worth the world hearing",
+    },
+]
+
+
 # ── Render ────────────────────────────────────────────────────────────────────
 
 def render(env, template_name: str, **ctx) -> str:
@@ -343,6 +389,7 @@ def main() -> int:
         ("projects.html", "projects.html", {"projects": projects}),
         ("research.html", "research.html", {"researchers": researchers, "learning": learning}),
         ("internships.html", "internships.html", {"internships": internships}),
+        ("milestones.html", "milestones.html", {"milestones": MILESTONES}),
         ("advice.html", "advice.html", {}),
     ]
 

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% set active_page = "milestones" %}
+{% set static_prefix = "" %}
+
+{% block title %}Milestones{% endblock %}
+
+{% block content %}
+<div class="section">
+  <h1 class="page-title">Milestones</h1>
+  <p class="page-subtitle">Recognition that follows from doing real work</p>
+</div>
+
+{% set phases = ["20s", "30s"] %}
+{% for phase in phases %}
+{% set phase_items = milestones | selectattr("phase", "equalto", phase) | list %}
+<div class="section">
+  <div class="section-label">{{ phase }}</div>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th>Milestone</th>
+        <th>What it signals</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for m in phase_items %}
+      <tr>
+        <td class="course-name">{{ m.name }}</td>
+        <td style="color: var(--muted);">{{ m.signal }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endfor %}
+
+{% endblock %}
