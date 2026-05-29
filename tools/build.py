@@ -289,6 +289,77 @@ ROADMAP_SEMESTERS = [
 ]
 
 
+# ── Professor data ────────────────────────────────────────────────────────────
+
+PROFESSORS = [
+    # Tier 1 — Primary Targets
+    {"rank": 1, "tier": 1, "name": "Michel Sadelain", "division": "CUMC",
+     "why": "CAR-T pioneer (Kymriah + Breyanzi FDA-approved); co-founder Alaya.bio (SRA Jan 2025); CICET brand new and actively recruiting"},
+    {"rank": 2, "tier": 1, "name": "Dalibor Sames", "division": "Chemistry",
+     "why": "AbbVie acquired Bretisilocin from his startup Gilgamesh for up to $1.2B (Aug 2025); co-founded Kures (acquired by ATAI); multiple clinical-stage CNS programs"},
+    {"rank": 3, "tier": 1, "name": "Saeed Tavazoie", "division": "Computational",
+     "why": "Two drugs in active Phase 1b/2 trials (RGX-104, RGX-202) at Inspirna, which he co-founded; $73M total raised"},
+    {"rank": 4, "tier": 1, "name": "Richard Friesner", "division": "Computational",
+     "why": "Co-founder and SAB Chair, Schrödinger (NASDAQ: SDGR); built Glide, WaterMap, and Jaguar — the industry-standard backbone of computational drug discovery; NAS member"},
+    {"rank": 5, "tier": 1, "name": "Brent Stockwell", "division": "Chemistry",
+     "why": "Discovered ferroptosis (one of the hottest cancer drug targets); co-founded four companies (CombinatoRx NASDAQ, Inzen, ProJenX, Exarta); NAM 2023"},
+    # Tier 2 — Strong Fits
+    {"rank": 6, "tier": 2, "name": "Henry Colecraft", "division": "CUMC",
+     "why": "Co-founder Stablix ($63M Series A) and Flux Therapeutics; active pharma collaboration with DyNAbind; enDUB platform directly addresses ion channel diseases"},
+    {"rank": 7, "tier": 2, "name": "Elisa Konofagou", "division": "BME",
+     "why": "Founder Delsona Therapeutics (FDA IND cleared; Phase I/II results, Sci. Transl. Med. Nov 2025); focused ultrasound BBB opening for CNS drug delivery"},
+    {"rank": 8, "tier": 2, "name": "Andrea Califano", "division": "Computational",
+     "why": "Co-founder + CSO DarwinHealth (clinical-use cancer diagnostics); exclusive Daiichi Sankyo collaboration; active clinical trials in 14 cancer types"},
+    {"rank": 9, "tier": 2, "name": "Gordana Vunjak-Novakovic", "division": "BME",
+     "why": "Co-founded four companies including TARA Biosystems (pharma cardiac drug testing, exclusive Columbia license) and EpiBone; Venture Partner at Catalio Capital"},
+    {"rank": 10, "tier": 2, "name": "Siddhartha Mukherjee", "division": "CUMC",
+     "why": "Founder + CEO Manas AI (launched Jan 2025, $24.6M seed, General Catalyst + Reid Hoffman); generative chemistry + docking + wet-lab for cancer drug discovery"},
+    # Tier 3 — Solid
+    {"rank": 11, "tier": 3, "name": "Kam Leong", "division": "BME",
+     "why": "60+ issued/licensed patents in drug, gene, and immunotherapy delivery; NAE + NAS + NAM (all three); oral LNP biologics for hemophilia directly relevant to Jonas's background"},
+    {"rank": 12, "tier": 3, "name": "Ke Cheng", "division": "BME",
+     "why": "Co-founded Xsome Biotech + Xollent Biotech; Capricor Therapeutics and Selsym Biotech are active licensees; two IND-enabling programs running at Columbia since 2023"},
+    {"rank": 13, "tier": 3, "name": "Mohammed AlQuraishi", "division": "Computational",
+     "why": "Co-founder OpenFold; AbbVie and J&J directly training OpenFold3 on proprietary protein-drug interaction data (2025); hottest intersection of structure-based design + generative AI"},
+    {"rank": 14, "tier": 3, "name": "Jingyue Ju", "division": "ChemE",
+     "why": "Roche/Genia acquisition ($350M) licensed his nucleotide chemistry; active antiviral drug discovery program generating lead compounds against pandemic-risk viruses"},
+    {"rank": 15, "tier": 3, "name": "Hashim Al-Hashimi", "division": "CUMC",
+     "why": "Co-founded Nymirum and Base4 Inc. (2023, active); RNA conformational dynamics platform enables docking against RNA — fastest-growing new drug modality"},
+    # Tier 4 — Relevant
+    {"rank": 16, "tier": 4, "name": "Jonathan Javitch", "division": "CUMC",
+     "why": "GPCR drug discovery platform licensed via Columbia Tech Ventures; GPCRs are targets of ~35% of all approved drugs; Director, Lieber Center for Schizophrenia Research"},
+    {"rank": 17, "tier": 4, "name": "Tal Danino", "division": "BME",
+     "why": "Probiotic tumor-colonizing cancer vaccine; Nature 2024 paper; active Columbia Tech Ventures licensing (CU18339); Chan Zuckerberg Biohub NY Investigator"},
+    {"rank": 18, "tier": 4, "name": "Harris Wang", "division": "Computational",
+     "why": "SAB member SNIPR Biome and Kingdom Supercultures; co-founded two companies; microbiome therapeutics is an emerging drug modality"},
+    {"rank": 19, "tier": 4, "name": "Santiago Correa", "division": "BME",
+     "why": "LNP platform using biological components for immune reprogramming; collaborating with Unchained Labs on automated LNP manufacturing; early-career and approachable"},
+    {"rank": 20, "tier": 4, "name": "Scott Banta", "division": "ChemE",
+     "why": "Patents US 11,260,121 and US 11,730,803 in virus-particle cancer immunotherapy; site-clickable EGF variants for targeted therapy (2025); co-founder Ironic Chemicals"},
+    # Tier 5 — Worth Knowing
+    {"rank": 21, "tier": 5, "name": "Cory Abate-Shen", "division": "CUMC",
+     "why": "Directly tested Selisistat (SIRT1 inhibitor) in mouse models; identified FOXM1/CENPF as druggable prostate cancer targets; NAS member"},
+    {"rank": 22, "tier": 5, "name": "Parisa Yousefpour", "division": "BME",
+     "why": "Self-amplifying RNA (saRNA) with drug-responsive gene expression control; next frontier beyond mRNA vaccines; joined Columbia Jan 2025"},
+    {"rank": 23, "tier": 5, "name": "Neel Shah", "division": "Chemistry",
+     "why": "ML-driven kinase drug target profiling (100+ kinases); 2024 NSF CAREER ($801K) oriented toward drug development; kinases are the #1 oncology target class"},
+    {"rank": 24, "tier": 5, "name": "Oleg Gang", "division": "ChemE",
+     "why": "DNA origami delivers doxorubicin to HER2+ breast cancer cells; Brookhaven provisional patent; Vannevar Bush Fellow 2024 — platform validated, no company yet"},
+    {"rank": 25, "tier": 5, "name": "Yonghao Yu", "division": "CUMC",
+     "why": "Chemoproteomic platform for covalent hotspot identification on undruggable targets; first-in-class covalent inhibitors for cancer, diabetes, and neurodegeneration"},
+    {"rank": 26, "tier": 5, "name": "Elham Azizi", "division": "Computational",
+     "why": "ML for tumor ecosystem modeling and immunotherapy resistance prediction; Takeda/NYAS award (2024) signals early pharma interest"},
+    {"rank": 27, "tier": 5, "name": "James Leighton", "division": "Chemistry",
+     "why": "Synthesis of ADC natural product payloads (picomolar potency); NIH-funded for pharmaceutical targets; ADCs are one of pharma's fastest-growing modalities"},
+    {"rank": 28, "tier": 5, "name": "Allie Obermeyer", "division": "ChemE",
+     "why": "Co-founder Werewool (venture-backed, 2022); protein condensate/coacervate drug delivery platform — startup founded, not yet pharma-industry-scale"},
+    {"rank": 29, "tier": 5, "name": "Barry Honig", "division": "Computational",
+     "why": "Built DelPhi and GRASP (foundational electrostatics tools); PrePCI database (proteome-scale protein-compound interaction predictions) embedded in commercial pipelines; former HHMI"},
+    {"rank": 30, "tier": 5, "name": "Xuebing Wu", "division": "Computational",
+     "why": "CRISPR + ML for RNA regulatory drug target identification; RNA-targeting small molecules one of the fastest-growing modalities; NIH New Innovator, Pew-Stewart Scholar"},
+]
+
+
 # ── Milestone data ────────────────────────────────────────────────────────────
 
 MILESTONES = [
@@ -376,6 +447,7 @@ def main() -> int:
             "researchers": researchers,
             "internships": internships,
             "learning": learning,
+            "semesters": ROADMAP_SEMESTERS,
         }),
         ("courses.html", "courses.html", {
             "courses": courses,
@@ -385,8 +457,8 @@ def main() -> int:
             ),
         }),
         ("registration.html", "registration.html", {}),
-        ("roadmap.html", "roadmap.html", {"semesters": ROADMAP_SEMESTERS, "courses": courses}),
         ("projects.html", "projects.html", {"projects": projects}),
+        ("professors.html", "professors.html", {"professors": PROFESSORS}),
         ("research.html", "research.html", {"researchers": researchers, "learning": learning}),
         ("internships.html", "internships.html", {"internships": internships}),
         ("milestones.html", "milestones.html", {"milestones": MILESTONES}),

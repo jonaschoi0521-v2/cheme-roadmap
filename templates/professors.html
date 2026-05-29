@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% set active_page = "professors" %}
+{% set static_prefix = "" %}
+
+{% block title %}Professors{% endblock %}
+
+{% block content %}
+<div class="section">
+  <h1 class="page-title">Columbia Professors</h1>
+  <p class="page-subtitle">Drug discovery &amp; delivery faculty — ranked by translational leverage and industry gravity</p>
+</div>
+
+{% set tier_meta = [
+  (1, "Primary Targets"),
+  (2, "Strong Fits"),
+  (3, "Solid"),
+  (4, "Relevant"),
+  (5, "Worth Knowing")
+] %}
+
+{% for tier_num, tier_label in tier_meta %}
+{% set tier_profs = professors | selectattr("tier", "equalto", tier_num) | list %}
+<div class="section">
+  <div class="section-label">Tier {{ tier_num }} — {{ tier_label }}</div>
+  <table class="data-table">
+    <thead>
+      <tr>
+        <th style="width: 2.5rem;">#</th>
+        <th>Name</th>
+        <th style="width: 7rem;">Division</th>
+        <th>Why</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for p in tier_profs %}
+      <tr>
+        <td style="color: var(--muted); text-align: right;">{{ p.rank }}</td>
+        <td class="course-name">{{ p.name }}</td>
+        <td style="color: var(--muted); font-size: 0.8rem;">{{ p.division }}</td>
+        <td style="color: var(--muted); font-size: 0.85rem;">{{ p.why }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endfor %}
+
+{% endblock %}

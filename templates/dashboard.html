@@ -14,6 +14,36 @@
   </div>
 </div>
 
+<!-- Degree Timeline -->
+<div class="section">
+  <div class="section-label">Degree Timeline</div>
+  <div class="timeline-wrap">
+    <div class="timeline">
+      {% for sem in semesters %}
+      <div class="timeline-col {% if sem.milestone %}milestone{% endif %}">
+        <div class="timeline-sem-label">{{ sem.label }}</div>
+        <div class="timeline-season">{{ sem.season }}</div>
+        {% if sem.note %}
+        <div class="timeline-note">{{ sem.note }}</div>
+        {% endif %}
+        {% if not sem.milestone %}
+        <ul class="timeline-courses">
+          {% for c in courses %}
+            {% if sem.label in c.semester or sem.season | replace("Spr ", "Semester ") in c.semester %}
+              <li class="status-{{ c.status | replace(' ', '-') }}">{{ c.title | replace(" — ", ": ") | truncate(40, True, "…") }}</li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+        {% else %}
+        <div style="margin-top:16px; font-size:13px; color:var(--accent); font-weight:600;">↑ Internal Transfer</div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <p style="font-size:12px; color:var(--muted); margin-top:8px;">Scroll right to see full timeline. Orange border = milestone or current focus.</p>
+</div>
+
 <!-- Chemical Engineering Requirements -->
 <div class="section">
   <div class="section-label">Chemical Engineering Requirements</div>
