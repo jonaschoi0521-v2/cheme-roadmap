@@ -7,34 +7,23 @@
 {% block content %}
 <div class="section">
   <h1 class="page-title">Columbia Professors</h1>
-  <p class="page-subtitle">Drug discovery &amp; delivery faculty — ranked by translational leverage and industry gravity</p>
+  <p class="page-subtitle">Drug discovery &amp; delivery faculty — ordered by chemistry-first fit, pharma application, and accessibility</p>
 </div>
 
-{% set tier_meta = [
-  (1, "Primary Targets"),
-  (2, "Strong Fits"),
-  (3, "Solid"),
-  (4, "Relevant"),
-  (5, "Worth Knowing")
-] %}
-
-{% for tier_num, tier_label in tier_meta %}
-{% set tier_profs = professors | selectattr("tier", "equalto", tier_num) | list %}
 <div class="section">
-  <div class="section-label">Tier {{ tier_num }} — {{ tier_label }}</div>
   <table class="data-table">
     <thead>
       <tr>
-        <th style="width: 2.5rem;">#</th>
+        <th style="width: 4rem;">Contact</th>
         <th>Name</th>
         <th style="width: 7rem;">Division</th>
         <th>Why</th>
       </tr>
     </thead>
     <tbody>
-      {% for p in tier_profs %}
+      {% for p in professors %}
       <tr>
-        <td style="color: var(--muted); text-align: right;">{{ p.rank }}</td>
+        <td style="color: var(--accent); font-weight: 600; white-space: nowrap;">{{ p.contact }}</td>
         <td class="course-name">{{ p.name }}</td>
         <td style="color: var(--muted); font-size: 0.8rem;">{{ p.division }}</td>
         <td style="color: var(--muted); font-size: 0.85rem;">{{ p.why }}</td>
@@ -43,6 +32,5 @@
     </tbody>
   </table>
 </div>
-{% endfor %}
 
 {% endblock %}
