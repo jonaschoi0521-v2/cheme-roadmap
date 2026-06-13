@@ -269,15 +269,14 @@ def compute_stats(courses, projects, researchers, internships, learning) -> dict
 # ── Timeline data ─────────────────────────────────────────────────────────────
 
 ROADMAP_SEMESTERS = [
-    {"label": "Sem I", "season": "Fall 2026", "note": "CC start", "milestone": False},
-    {"label": "Sem II", "season": "Spr 2027", "note": "Apply to SEAS", "milestone": False},
-    {"label": "TRANSFER", "season": "→ SEAS", "note": "Transfer milestone", "milestone": True},
-    {"label": "Sem III", "season": "Fall 2027", "note": "First SEAS semester", "milestone": False},
-    {"label": "Sem IV", "season": "Spr 2028", "note": "", "milestone": False},
-    {"label": "Sem V", "season": "Fall 2028", "note": "Transport, Thermo", "milestone": False},
-    {"label": "Sem VI", "season": "Spr 2029", "note": "Kinetics, Separations", "milestone": False},
-    {"label": "Sem VII", "season": "Fall 2029", "note": "Design, Control", "milestone": False},
-    {"label": "Sem VIII", "season": "Spr 2030", "note": "ChemE Lab, Graduation", "milestone": False},
+    {"label": "Sem I", "season": "Fall 2026", "note": "Calc III, Physics I", "milestone": False},
+    {"label": "Sem II", "season": "Spr 2027", "note": "Calc IV, Java", "milestone": False},
+    {"label": "Sem III", "season": "Fall 2027", "note": "Orgo I, ODE, LA", "milestone": False},
+    {"label": "Sem IV", "season": "Spr 2028", "note": "Orgo II, Mechanics", "milestone": False},
+    {"label": "Sem V", "season": "Fall 2028", "note": "Phys Chem I, QM I", "milestone": False},
+    {"label": "Sem VI", "season": "Spr 2029", "note": "Phys Chem II, QM II", "milestone": False},
+    {"label": "Sem VII", "season": "Fall 2029", "note": "QSim Lab, ML, DL", "milestone": False},
+    {"label": "Sem VIII", "season": "Spr 2030", "note": "Mol Modeling, Graduation", "milestone": False},
 ]
 
 

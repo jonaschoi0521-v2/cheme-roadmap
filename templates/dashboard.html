@@ -44,9 +44,9 @@
   <p style="font-size:12px; color:var(--muted); margin-top:8px;">Scroll right to see full timeline. Orange border = milestone or current focus.</p>
 </div>
 
-<!-- Chemical Engineering Requirements -->
+<!-- Chemical Physics Requirements -->
 <div class="section">
-  <div class="section-label">Chemical Engineering Requirements</div>
+  <div class="section-label">Chemical Physics Requirements</div>
   <div class="progress-group">
     <div class="progress-row">
       <span class="progress-label">All Courses</span>
@@ -55,14 +55,6 @@
              style="width: {{ stats.all_courses_pct }}%"></div>
       </div>
       <span class="progress-count">{{ stats.all_courses_complete }} / {{ stats.all_courses_total }}</span>
-    </div>
-    <div class="progress-row">
-      <span class="progress-label">ChemE Core</span>
-      <div class="progress-track">
-        <div class="progress-fill {% if stats.cheme_core_pct == 100 %}complete{% endif %}"
-             style="width: {{ stats.cheme_core_pct }}%"></div>
-      </div>
-      <span class="progress-count">{{ stats.cheme_core_complete }} / {{ stats.cheme_core_total }}</span>
     </div>
   </div>
 </div>
