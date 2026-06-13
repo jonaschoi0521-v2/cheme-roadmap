@@ -1,8 +1,8 @@
-# CHEM UN3085 — Physical-Analytical Laboratory I
+# PHYS UN3007 — Electricity-Magnetism
 
 **Status:** planned
-**Semester:** Semester V
-**Credits:** 4
+**Semester:** Semester IV
+**Credits:** 3
 **Fulfills:** Chemical Physics Major
 **Grade:**
 

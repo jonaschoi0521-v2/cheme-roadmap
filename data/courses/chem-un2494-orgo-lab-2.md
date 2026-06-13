@@ -1,8 +1,8 @@
-# CHEM UN3085 — Physical-Analytical Laboratory I
+# CHEM UN2494 — Organic Chemistry Lab II
 
 **Status:** planned
-**Semester:** Semester V
-**Credits:** 4
+**Semester:** Semester IV
+**Credits:** 0
 **Fulfills:** Chemical Physics Major
 **Grade:**
 

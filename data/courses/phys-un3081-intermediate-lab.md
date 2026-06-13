@@ -1,8 +1,8 @@
-# CHEM UN3085 — Physical-Analytical Laboratory I
+# PHYS UN3081 — Intermediate Laboratory
 
 **Status:** planned
-**Semester:** Semester V
-**Credits:** 4
+**Semester:** Semester VIII
+**Credits:** 2
 **Fulfills:** Chemical Physics Major
 **Grade:**
 

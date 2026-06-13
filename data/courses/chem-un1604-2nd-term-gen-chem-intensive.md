@@ -1,7 +1,7 @@
-# CHEM UN3085 — Physical-Analytical Laboratory I
+# CHEM UN1604 — 2nd Term Gen Chem Intensive
 
 **Status:** planned
-**Semester:** Semester V
+**Semester:** Semester I
 **Credits:** 4
 **Fulfills:** Chemical Physics Major
 **Grade:**

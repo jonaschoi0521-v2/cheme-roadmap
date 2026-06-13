@@ -1,9 +1,9 @@
-# CHEM UN3085 — Physical-Analytical Laboratory I
+# COMS W1004 — Programming in Java
 
 **Status:** planned
-**Semester:** Semester V
-**Credits:** 4
-**Fulfills:** Chemical Physics Major
+**Semester:** Semester II
+**Credits:** 3
+**Fulfills:** Builder Stack
 **Grade:**
 
 ---

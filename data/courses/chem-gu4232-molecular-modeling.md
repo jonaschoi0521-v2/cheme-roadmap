@@ -1,8 +1,8 @@
-# CHEM UN3085 — Physical-Analytical Laboratory I
+# CHEM GU4232 — Intro to Molecular Modeling
 
 **Status:** planned
-**Semester:** Semester V
-**Credits:** 4
+**Semester:** Semester VIII
+**Credits:** 4.5
 **Fulfills:** Chemical Physics Major
 **Grade:**
 

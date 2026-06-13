@@ -1,9 +1,9 @@
-# CHEM UN3085 — Physical-Analytical Laboratory I
+# STAT GU4001 — Probability & Statistics
 
 **Status:** planned
 **Semester:** Semester V
-**Credits:** 4
-**Fulfills:** Chemical Physics Major
+**Credits:** 3
+**Fulfills:** Builder Stack
 **Grade:**
 
 ---

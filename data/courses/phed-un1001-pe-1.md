@@ -1,16 +1,14 @@
-# PHED UN1001 — Physical Education Activities
+# PHED UN1001 — Physical Education I
 
 **Status:** planned
-**Semester:** Semester VI
-**Credits:** 1
-**Fulfills:** SEAS PE Requirement
+**Semester:** Semester VII
+**Credits:** 0
+**Fulfills:** Core Curriculum
 **Grade:**
 
 ---
 
 ## Why This Course Matters
-
-Required by SEAS. Choose an activity you'll actually enjoy.
 
 ---
 

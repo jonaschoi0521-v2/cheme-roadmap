@@ -1,9 +1,9 @@
-# CHEM UN3085 — Physical-Analytical Laboratory I
+# COCI CC1101 — Contemporary Civilization I
 
 **Status:** planned
-**Semester:** Semester V
+**Semester:** Semester III
 **Credits:** 4
-**Fulfills:** Chemical Physics Major
+**Fulfills:** Core Curriculum
 **Grade:**
 
 ---

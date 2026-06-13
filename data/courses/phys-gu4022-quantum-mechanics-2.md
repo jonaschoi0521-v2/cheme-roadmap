@@ -1,8 +1,8 @@
-# CHEM UN3085 — Physical-Analytical Laboratory I
+# PHYS GU4022 — Quantum Mechanics II
 
 **Status:** planned
-**Semester:** Semester V
-**Credits:** 4
+**Semester:** Semester VI
+**Credits:** 3
 **Fulfills:** Chemical Physics Major
 **Grade:**
 

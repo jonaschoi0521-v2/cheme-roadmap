@@ -1,9 +1,9 @@
-# CHEM UN3085 — Physical-Analytical Laboratory I
+# — — Global Core I
 
 **Status:** planned
-**Semester:** Semester V
-**Credits:** 4
-**Fulfills:** Chemical Physics Major
+**Semester:** Semester VII
+**Credits:** 3
+**Fulfills:** Core Curriculum
 **Grade:**
 
 ---

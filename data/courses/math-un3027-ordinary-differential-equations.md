@@ -1,8 +1,8 @@
-# CHEM UN3085 — Physical-Analytical Laboratory I
+# MATH UN3027 — Ordinary Differential Equations
 
 **Status:** planned
-**Semester:** Semester V
-**Credits:** 4
+**Semester:** Semester III
+**Credits:** 3
 **Fulfills:** Chemical Physics Major
 **Grade:**
 

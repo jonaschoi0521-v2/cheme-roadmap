@@ -1,8 +1,8 @@
-# CHEM UN3085 — Physical-Analytical Laboratory I
+# PHYS UN1602 — Physics II
 
 **Status:** planned
-**Semester:** Semester V
-**Credits:** 4
+**Semester:** Semester II
+**Credits:** 3.5
 **Fulfills:** Chemical Physics Major
 **Grade:**
 

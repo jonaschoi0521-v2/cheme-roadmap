@@ -1,16 +1,14 @@
-# PHED UN1002 — Physical Education Activities
+# PHED UN1002 — Physical Education II
 
 **Status:** planned
 **Semester:** Semester VIII
 **Credits:** 1
-**Fulfills:** SEAS PE Requirement
+**Fulfills:** Core Curriculum
 **Grade:**
 
 ---
 
 ## Why This Course Matters
-
-Required by SEAS. Second PE credit.
 
 ---
 

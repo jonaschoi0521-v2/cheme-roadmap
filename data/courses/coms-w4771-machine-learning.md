@@ -1,9 +1,9 @@
-# CHEM UN3085 — Physical-Analytical Laboratory I
+# COMS W4771 — Machine Learning
 
 **Status:** planned
-**Semester:** Semester V
-**Credits:** 4
-**Fulfills:** Chemical Physics Major
+**Semester:** Semester VI
+**Credits:** 3
+**Fulfills:** Builder Stack
 **Grade:**
 
 ---

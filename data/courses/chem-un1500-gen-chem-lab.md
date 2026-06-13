@@ -1,8 +1,8 @@
-# CHEM UN3085 — Physical-Analytical Laboratory I
+# CHEM UN1500 — General Chemistry Lab
 
 **Status:** planned
-**Semester:** Semester V
-**Credits:** 4
+**Semester:** Semester II
+**Credits:** 3
 **Fulfills:** Chemical Physics Major
 **Grade:**
 

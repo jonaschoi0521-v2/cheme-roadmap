@@ -1,9 +1,9 @@
-# CHEM UN3085 — Physical-Analytical Laboratory I
+# COMS W3203 — Discrete Mathematics
 
 **Status:** planned
 **Semester:** Semester V
 **Credits:** 4
-**Fulfills:** Chemical Physics Major
+**Fulfills:** Builder Stack
 **Grade:**
 
 ---

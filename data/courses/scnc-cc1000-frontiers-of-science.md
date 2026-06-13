@@ -1,9 +1,9 @@
-# CHEM UN3085 — Physical-Analytical Laboratory I
+# SCNC CC1000 — Frontiers of Science
 
 **Status:** planned
-**Semester:** Semester V
+**Semester:** Semester II
 **Credits:** 4
-**Fulfills:** Chemical Physics Major
+**Fulfills:** Core Curriculum
 **Grade:**
 
 ---

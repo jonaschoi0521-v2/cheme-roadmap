@@ -1,9 +1,9 @@
-# CHEM UN3085 — Physical-Analytical Laboratory I
+# ECBM E4040 — Neural Networks & Deep Learning
 
 **Status:** planned
-**Semester:** Semester V
-**Credits:** 4
-**Fulfills:** Chemical Physics Major
+**Semester:** Semester VII
+**Credits:** 3
+**Fulfills:** Builder Stack
 **Grade:**
 
 ---

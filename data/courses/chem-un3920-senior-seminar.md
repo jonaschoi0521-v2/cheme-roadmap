@@ -1,8 +1,8 @@
-# CHEM UN3085 — Physical-Analytical Laboratory I
+# CHEM UN3920 — Senior Seminar
 
 **Status:** planned
-**Semester:** Semester V
-**Credits:** 4
+**Semester:** Semester VII
+**Credits:** 2
 **Fulfills:** Chemical Physics Major
 **Grade:**
 

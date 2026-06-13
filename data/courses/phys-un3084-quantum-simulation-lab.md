@@ -1,8 +1,8 @@
-# CHEM UN3085 — Physical-Analytical Laboratory I
+# PHYS UN3084 — Quantum Simulation and Computing Lab
 
 **Status:** planned
-**Semester:** Semester V
-**Credits:** 4
+**Semester:** Semester VII
+**Credits:** 3
 **Fulfills:** Chemical Physics Major
 **Grade:**
 

@@ -1,9 +1,9 @@
-# CHEM UN3085 — Physical-Analytical Laboratory I
+# HUMA UN1123 — Music Humanities
 
 **Status:** planned
-**Semester:** Semester V
-**Credits:** 4
-**Fulfills:** Chemical Physics Major
+**Semester:** Semester VIII
+**Credits:** 3
+**Fulfills:** Core Curriculum
 **Grade:**
 
 ---
