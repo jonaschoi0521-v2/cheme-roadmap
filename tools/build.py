@@ -73,8 +73,8 @@ def days_until(deadline_str: str) -> int | None:
 
 
 _SEM_ORDER = {
-    "Semester I": 1, "Semester II": 2, "Semester III": 3, "Semester IV": 4,
-    "Semester V": 5, "Semester VI": 6, "Semester VII": 7, "Semester VIII": 8,
+    "Semester VIII": 8, "Semester VII": 7, "Semester VI": 6, "Semester V": 5,
+    "Semester IV": 4, "Semester III": 3, "Semester II": 2, "Semester I": 1,
 }
 
 def semester_order(sem: str) -> int:
