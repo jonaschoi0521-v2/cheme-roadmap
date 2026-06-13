@@ -92,22 +92,14 @@ def classify_subject(title: str) -> str:
         return "Chemistry"
     elif code == "PHYS":
         return "Physics"
-    elif code == "BIOL":
-        return "Biology"
-    elif code in ("CHEN", "CHEE", "CHAP"):
-        return "Chemical Engineering"
-    elif code == "ENGI":
-        return "Engineering & CS"
-    elif code == "PHED":
-        return "Physical Education"
+    elif code in ("COMS", "ECBM", "STAT"):
+        return "Programming"
     else:
-        return "Humanities & General"
+        return "Core Curriculum"
 
 
 SUBJECT_ORDER = [
-    "Mathematics", "Chemistry", "Physics", "Biology",
-    "Chemical Engineering", "Engineering & CS",
-    "Humanities & General", "Physical Education",
+    "Core Curriculum", "Chemistry", "Physics", "Mathematics", "Programming",
 ]
 
 
