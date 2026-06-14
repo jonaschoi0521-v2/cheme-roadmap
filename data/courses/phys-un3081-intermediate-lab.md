@@ -1,7 +1,7 @@
 # PHYS UN3081 — Intermediate Laboratory
 
 **Status:** planned
-**Semester:** Semester VII
+**Semester:** Semester VIII
 **Credits:** 2
 **Fulfills:** Chemical Physics Major
 **Grade:**
