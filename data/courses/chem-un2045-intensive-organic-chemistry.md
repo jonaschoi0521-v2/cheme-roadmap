@@ -1,8 +1,8 @@
-# CHEM UN1500 — General Chemistry Lab
+# CHEM UN2045 — Intensive Organic Chemistry
 
 **Status:** planned
-**Semester:** Semester I
-**Credits:** 3
+**Semester:** Semester II
+**Credits:** 4
 **Fulfills:** Chemical Physics Major
 **Grade:**
 

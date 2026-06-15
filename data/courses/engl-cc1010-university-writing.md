@@ -1,9 +1,9 @@
-# CHEM UN2443 — Organic Chemistry I
+# ENGL CC1010 — University Writing
 
 **Status:** planned
-**Semester:** Semester III
-**Credits:** 4
-**Fulfills:** Chemical Physics Major
+**Semester:** Semester II
+**Credits:** 3
+**Fulfills:** Core Curriculum
 **Grade:**
 
 ---

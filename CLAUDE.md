@@ -108,4 +108,5 @@ Wait ~1 min, then check https://jonaschoi0521-v2.github.io/cheme-roadmap
 3. **One entity per file.** Never combine two courses or two projects.
 4. **Filenames are stable.** Once created, don't rename.
 5. **Never push `private/` or `research/`.** These are gitignored — keep them local only.
-6. **Course changes always touch both files.** When adding, removing, or switching a course between semesters: update the course's `data/courses/<file>.md` (Semester field) AND `templates/registration.html` (the correct semester table). Also update `private/course-plan/chem-phy/chemical-physics-semester-schedule.md` if the semester totals change. Never update only one without the others.
+6. **`private/coding/0-problems.py` — read only the topmost problem.** New problems are added at the top; never read past the first one (token waste).
+7. **Course changes always touch both files.** When adding, removing, or switching a course between semesters: update the course's `data/courses/<file>.md` (Semester field) AND `templates/registration.html` (the correct semester table). Also update `private/course-plan/chem-phy/chemical-physics-semester-schedule.md` if the semester totals change. Never update only one without the others.

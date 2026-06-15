@@ -1,8 +1,8 @@
-# CHEM UN2494 — Organic Chemistry Lab II
+# CHEM UN1507 — Intensive General Chemistry Lab
 
 **Status:** planned
-**Semester:** Semester IV
-**Credits:** 0
+**Semester:** Semester I
+**Credits:** 3
 **Fulfills:** Chemical Physics Major
 **Grade:**
 
