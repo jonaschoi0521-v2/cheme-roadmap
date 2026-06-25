@@ -1,7 +1,7 @@
 # STAT GU4001 — Probability & Statistics
 
 **Status:** planned
-**Semester:** Semester V
+**Semester:** Semester IV
 **Credits:** 3
 **Fulfills:** Builder Stack
 **Grade:**

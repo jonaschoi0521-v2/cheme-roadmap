@@ -38,11 +38,6 @@ def days_until(deadline: str) -> int | None:
         return None
 
 
-def bar(pct: int, width: int = 20) -> str:
-    filled = int(width * pct / 100)
-    return "█" * filled + "░" * (width - filled)
-
-
 def main() -> int:
     print(f"\n{'='*50}")
     print(f"  ChemE Roadmap — {TODAY.strftime('%B %-d, %Y')}")
@@ -50,34 +45,16 @@ def main() -> int:
 
     # Courses
     course_dir = DATA_DIR / "courses"
-    courses = [fields(p) for p in course_dir.glob("*.md") if not p.name.startswith("_")]
-
-    prereq_kw = ["Transfer Prerequisite", "CC →", "CC-phase", "Core Requirement"]
-    prereqs = [c for c in courses if any(k in c.get("Fulfills", "") for k in prereq_kw)
-               or any(f"Semester {n}" in c.get("Semester", "")
-                      for n in ["I", "II", "III", "IV"])]
-    seas = [c for c in courses if "SEAS ChemE Core" in c.get("Fulfills", "")]
-
-    prereq_done = sum(1 for c in prereqs if c.get("Status", "") == "completed")
-    seas_done = sum(1 for c in seas if c.get("Status", "") == "completed")
-
-    pct_p = int(prereq_done / max(len(prereqs), 1) * 100)
-    pct_s = int(seas_done / max(len(seas), 1) * 100)
-
-    print("ACADEMIC PROGRESS")
-    print(f"  Transfer Prerequisites  {bar(pct_p)} {prereq_done}/{len(prereqs)}")
-    print(f"  SEAS Core Courses       {bar(pct_s)} {seas_done}/{len(seas)}")
-
     in_progress = [p for p in course_dir.glob("*.md")
                    if not p.name.startswith("_") and
                    fields(p).get("Status", "") == "in-progress"]
     if in_progress:
-        print(f"\n  In progress:")
+        print("IN PROGRESS")
         for p in in_progress:
-            print(f"    · {title(p)}")
+            print(f"  · {title(p)}")
+        print()
 
     # Projects
-    print()
     proj_dir = DATA_DIR / "projects"
     active_projects = []
     for p in proj_dir.glob("*.md"):

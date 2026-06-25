@@ -1,7 +1,7 @@
 # PHYS UN1402 — Intro Elec/Magnetism & Optics
 
 **Status:** planned
-**Semester:** Semester II
+**Semester:** Semester IV
 **Credits:** 3
 **Fulfills:** Chemical Physics Major
 **Grade:**

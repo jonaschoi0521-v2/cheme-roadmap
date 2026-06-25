@@ -1,7 +1,7 @@
 # COMS W3134 — Data Structures
 
 **Status:** planned
-**Semester:** Semester IV
+**Semester:** Semester III
 **Credits:** 3
 **Fulfills:** Builder Stack
 **Grade:**

@@ -1,7 +1,7 @@
 # COMS W3203 — Discrete Mathematics
 
 **Status:** planned
-**Semester:** Semester V
+**Semester:** Semester IV
 **Credits:** 4
 **Fulfills:** Builder Stack
 **Grade:**
