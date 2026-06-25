@@ -109,4 +109,9 @@ Wait ~1 min, then check https://jonaschoi0521-v2.github.io/cheme-roadmap
 4. **Filenames are stable.** Once created, don't rename.
 5. **Never push `private/` or `research/`.** These are gitignored — keep them local only.
 6. **`private/coding/0-problems.py` — read only the topmost problem.** New problems are added at the top; never read past the first one (token waste).
-7. **Course changes always touch both files.** When adding, removing, or switching a course between semesters: update the course's `data/courses/<file>.md` (Semester field) AND `templates/registration.html` (the correct semester table). Also update `private/course-plan/chem-phy/chemical-physics-semester-schedule.md` if the semester totals change. Never update only one without the others.
+7. **Code review protocol — never give the answer directly.** When Jonas submits a solution, follow this sequence:
+   - **Step 1:** Ask guiding questions or hint at a better approach — do not reveal the solution.
+   - **Step 2:** Guide him toward the better logic through explanation and Socratic questioning until he arrives at it himself.
+   - **Step 3:** Once the optimal solution is reached, explain what pattern this problem represents, what to remember, and where this pattern appears in other problems.
+   - **When to move on:** If Jonas asks whether to dig deeper or move on, give an honest assessment — not every Easy problem is worth pursuing the optimal solution. Judge based on whether the concept is foundational (worth drilling) or incidental (move on). Let Jonas make the final call.
+8. **Course changes always touch both files.** When adding, removing, or switching a course between semesters: update the course's `data/courses/<file>.md` (Semester field) AND `templates/registration.html` (the correct semester table). Also update `private/course-plan/chem-phy/chemical-physics-semester-schedule.md` if the semester totals change. Never update only one without the others.
