@@ -113,6 +113,8 @@ def load_courses() -> list[dict]:
             continue
         text = path.read_text(encoding="utf-8")
         fields = parse_fields(text)
+        if fields.get("Status", "planned").lower() == "waived":
+            continue
         title = parse_title(text)
         sem = fields.get("Semester", "")
         courses.append({
