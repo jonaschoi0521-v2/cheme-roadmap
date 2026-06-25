@@ -1,4 +1,4 @@
-# ECBM E4040 — Neural Networks & Deep Learning
+# COMS E4776 — Neural Networks & Deep Learning
 
 **Status:** planned
 **Semester:** Semester VII

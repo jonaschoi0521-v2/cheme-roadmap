@@ -1,8 +1,8 @@
 # PHED UN1001 — Physical Education I
 
 **Status:** planned
-**Semester:** Semester III
-**Credits:** 0
+**Semester:** Semester VII
+**Credits:** 1
 **Fulfills:** Core Curriculum
 **Grade:**
 

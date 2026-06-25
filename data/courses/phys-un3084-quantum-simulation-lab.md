@@ -1,7 +1,7 @@
 # PHYS UN3084 — Quantum Simulation and Computing Lab
 
 **Status:** planned
-**Semester:** Semester VII
+**Semester:** Semester VIII
 **Credits:** 3
 **Fulfills:** Chemical Physics Major
 **Grade:**

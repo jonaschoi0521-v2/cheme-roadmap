@@ -1,7 +1,7 @@
 # — — Global Core II
 
 **Status:** planned
-**Semester:** Semester VIII
+**Semester:** Semester VII
 **Credits:** 3
 **Fulfills:** Core Curriculum
 **Grade:**
