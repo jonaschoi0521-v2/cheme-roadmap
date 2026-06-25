@@ -1,4 +1,4 @@
-# MATH UN3027 — Ordinary Differential Equations
+# MATH UN2030 — Ordinary Differential Equations
 
 **Status:** planned
 **Semester:** Semester III
