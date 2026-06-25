@@ -1,7 +1,7 @@
 # CHEM GU4221 — Quantum Chemistry I
 
 **Status:** planned
-**Semester:** Semester V
+**Semester:** Semester VII
 **Credits:** 3
 **Fulfills:** Chemical Physics Major
 **Grade:**

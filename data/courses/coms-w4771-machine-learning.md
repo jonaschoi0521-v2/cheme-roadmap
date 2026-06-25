@@ -1,7 +1,7 @@
 # COMS W4771 — Machine Learning
 
 **Status:** planned
-**Semester:** Semester VI
+**Semester:** Semester V
 **Credits:** 3
 **Fulfills:** Builder Stack
 **Grade:**

@@ -1,7 +1,7 @@
 # CHEM GR6222 — Quantum Chemistry II
 
 **Status:** planned
-**Semester:** Semester VI
+**Semester:** Semester VIII
 **Credits:** 2.5
 **Fulfills:** Chemical Physics Major
 **Grade:**
