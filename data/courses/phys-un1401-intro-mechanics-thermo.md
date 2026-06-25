@@ -1,8 +1,8 @@
-# PHYS UN1601 — Physics I
+# PHYS UN1401 — Intro to Mechanics & Thermo
 
-**Status:** waived
-**Semester:** —
-**Credits:** 3.5
+**Status:** planned
+**Semester:** Semester I
+**Credits:** 3
 **Fulfills:** Chemical Physics Major
 **Grade:**
 

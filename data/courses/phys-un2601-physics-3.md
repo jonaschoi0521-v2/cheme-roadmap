@@ -1,7 +1,7 @@
 # PHYS UN2601 — Physics III
 
-**Status:** planned
-**Semester:** Semester III
+**Status:** waived
+**Semester:** —
 **Credits:** 3.5
 **Fulfills:** Chemical Physics Major
 **Grade:**

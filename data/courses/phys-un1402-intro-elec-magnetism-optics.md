@@ -1,8 +1,8 @@
-# PHYS UN1601 — Physics I
+# PHYS UN1402 — Intro Elec/Magnetism & Optics
 
-**Status:** waived
-**Semester:** —
-**Credits:** 3.5
+**Status:** planned
+**Semester:** Semester II
+**Credits:** 3
 **Fulfills:** Chemical Physics Major
 **Grade:**
 

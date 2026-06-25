@@ -1,8 +1,8 @@
-# PHYS UN1601 — Physics I
+# PHYS UN1403 — Intro to Classical & Quantum Waves
 
-**Status:** waived
-**Semester:** —
-**Credits:** 3.5
+**Status:** planned
+**Semester:** Semester III
+**Credits:** 3
 **Fulfills:** Chemical Physics Major
 **Grade:**
 

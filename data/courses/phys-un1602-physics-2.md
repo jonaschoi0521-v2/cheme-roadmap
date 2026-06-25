@@ -1,7 +1,7 @@
 # PHYS UN1602 — Physics II
 
-**Status:** planned
-**Semester:** Semester II
+**Status:** waived
+**Semester:** —
 **Credits:** 3.5
 **Fulfills:** Chemical Physics Major
 **Grade:**
