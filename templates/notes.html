@@ -13,7 +13,7 @@
 {% if notes %}
 {% for n in notes %}
 <div class="about-section">
-  <div class="section-label">{{ n.title }}</div>
+  <div class="note-title">{{ n.title }}</div>
   <div class="note-body">{{ n.body_html | safe }}</div>
 </div>
 {% endfor %}
