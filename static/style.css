@@ -143,6 +143,14 @@ footer.site {
   border-bottom: 1px solid var(--rule);
 }
 
+.note-title {
+  font-family: var(--serif);
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 18px;
+}
+
 /* ── Progress bars ── */
 
 .progress-group {
