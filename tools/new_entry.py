@@ -9,6 +9,7 @@ Usage:
     python3 tools/new_entry.py learning "MIT OCW 5.60 Thermodynamics"
     python3 tools/new_entry.py paper "Drug Delivery Nanoparticles 2024"
     python3 tools/new_entry.py opportunity "NSF REU Summer 2027"
+    python3 tools/new_entry.py note "Why quantum chemistry, not quantum mechanics"
 """
 
 from __future__ import annotations
@@ -263,6 +264,21 @@ TEMPLATES = {
 
 ## Questions & Follow-ups
 
+""",
+    },
+    "note": {
+        "dir": ROOT / "data" / "notes",
+        "filename": lambda name: f"{slugify(name)}.md",
+        "content": lambda name: f"""# {name}
+
+**Date:** {TODAY}
+**Category:** Decision
+
+---
+
+[Write the note here in plain markdown — ## subheadings, **bold**, lists, and
+$inline math$ all render. Category is either Decision (why a choice was made)
+or Concept (something learned, explained to yourself).]
 """,
     },
     "opportunity": {

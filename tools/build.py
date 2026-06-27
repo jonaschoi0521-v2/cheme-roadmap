@@ -204,6 +204,31 @@ def load_internships() -> list[dict]:
     return internships
 
 
+def load_notes() -> list[dict]:
+    """Strategic/educational notes — the 'why' layer. Full prose, newest first."""
+    notes = []
+    notes_dir = DATA_DIR / "notes"
+    if not notes_dir.exists():
+        return notes
+    for path in sorted(notes_dir.glob("*.md")):
+        if path.name.startswith("_"):
+            continue
+        text = path.read_text(encoding="utf-8")
+        fields = parse_fields(text)
+        # Body = everything after the first horizontal rule, rendered as markdown.
+        parts = re.split(r"^---\s*$", text, maxsplit=1, flags=re.MULTILINE)
+        body_md = parts[1].strip() if len(parts) > 1 else ""
+        notes.append({
+            "title": parse_title(text),
+            "file": path.name,
+            "date": fields.get("Date", ""),
+            "category": fields.get("Category", "Note"),
+            "body_html": markdown.markdown(body_md, extensions=["extra"]),
+        })
+    notes.sort(key=lambda n: n["date"], reverse=True)
+    return notes
+
+
 def load_learning() -> list[dict]:
     resources = []
     learn_dir = DATA_DIR / "learning"
@@ -321,52 +346,6 @@ PROFESSORS = [
 ]
 
 
-# ── Milestone data ────────────────────────────────────────────────────────────
-
-MILESTONES = [
-    {
-        "phase": "20s",
-        "name": "Hello Tomorrow Deep Tech Challenge",
-        "signal": "First global deep tech founder recognition",
-    },
-    {
-        "phase": "20s",
-        "name": "Y Combinator (acceptance)",
-        "signal": "Top-tier startup validation, global",
-    },
-    {
-        "phase": "20s",
-        "name": "Forbes 30 Under 30",
-        "signal": "Mainstream visibility, entrepreneurship/science",
-    },
-    {
-        "phase": "30s",
-        "name": "MacArthur \"Genius\" Grant",
-        "signal": "$800K, no strings. Signals genuinely original work. They find you — you can't apply",
-    },
-    {
-        "phase": "30s",
-        "name": "MIT TR35 (Innovators Under 35)",
-        "signal": "The science/tech world's Forbes, but harder",
-    },
-    {
-        "phase": "30s",
-        "name": "POSCO TJ Park Prize",
-        "signal": "Top Korean-heritage scientist recognition, globally respected",
-    },
-    {
-        "phase": "30s",
-        "name": "TIME 100",
-        "signal": "Global cultural/leadership recognition at scale",
-    },
-    {
-        "phase": "30s",
-        "name": "TED main stage invitation",
-        "signal": "Platform milestone — your idea is worth the world hearing",
-    },
-]
-
-
 # ── Render ────────────────────────────────────────────────────────────────────
 
 def render(env, template_name: str, **ctx) -> str:
@@ -393,6 +372,7 @@ def main() -> int:
     researchers = load_researchers()
     internships = load_internships()
     learning = load_learning()
+    notes = load_notes()
     stats = compute_stats(courses, projects, researchers, internships, learning)
 
     common = {
@@ -422,8 +402,7 @@ def main() -> int:
         ("professors.html", "professors.html", {"professors": PROFESSORS}),
         ("research.html", "research.html", {"researchers": researchers, "learning": learning}),
         ("internships.html", "internships.html", {"internships": internships}),
-        ("milestones.html", "milestones.html", {"milestones": MILESTONES}),
-        ("advice.html", "advice.html", {}),
+        ("notes.html", "notes.html", {"notes": notes}),
     ]
 
     for template_name, out_name, ctx in pages:

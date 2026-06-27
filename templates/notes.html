@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% set active_page = "notes" %}
+{% set static_prefix = "" %}
+
+{% block title %}Notes{% endblock %}
+
+{% block content %}
+<div class="section">
+  <h1 class="page-title">Notes</h1>
+  <p class="page-subtitle">The reasoning behind the path — decisions made and concepts learned.</p>
+</div>
+
+{% if notes %}
+{% for n in notes %}
+<div class="about-section">
+  <div class="note-meta">
+    <span class="badge">{{ n.category }}</span>
+    {% if n.date %}<span class="note-date">{{ n.date }}</span>{% endif %}
+  </div>
+  <div class="section-label">{{ n.title }}</div>
+  <div class="note-body">{{ n.body_html | safe }}</div>
+</div>
+{% endfor %}
+{% else %}
+<div class="section">
+  <p class="empty">No notes yet. Add one with: <code>python3 tools/new_entry.py note "Why quantum chemistry, not quantum mechanics"</code></p>
+</div>
+{% endif %}
+{% endblock %}
