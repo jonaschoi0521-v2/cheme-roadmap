@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notes — Jonas Choi</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+  <header class="site">
+    <div class="wrap">
+      <div class="row">
+        <div>
+          <a class="title" href="index.html">Chemical Physics Roadmap</a>
+          <span class="subtitle">Columbia College · Chemical Physics</span>
+        </div>
+        <nav>
+          <a href="index.html" >About</a>
+          <a href="dashboard.html" >Dashboard</a>
+          <a href="courses.html" >Courses</a>
+          <a href="registration.html" >Registration</a>
+          <a href="projects.html" >Projects</a>
+          <a href="professors.html" >Professors</a>
+          <a href="research.html" >Research</a>
+          <a href="internships.html" >Opportunities</a>
+          <a href="notes.html" class="active">Notes</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap">
+<div class="section">
+  <h1 class="page-title">Notes</h1>
+  <p class="page-subtitle">The reasoning behind the path — decisions made and concepts learned.</p>
+</div>
+
+<div class="about-section">
+  <div class="note-meta">
+    <span class="badge">Concept</span>
+<span class="note-date">2026-06-27</span>  </div>
+  <div class="section-label">Quantum computing: what it is, and where it fits</div>
+  <div class="note-body"><h2>What it actually is</h2>
+<p>A normal computer uses bits. Each bit is 0 or 1. A quantum computer uses qubits. A qubit is a small quantum system, like an electron that can sit in its ground or excited state. The difference is that a qubit does not have to be 0 or 1. It can be a mix of both at once. That is superposition, the same idea from quantum mechanics where an electron is not in one fixed place until it is measured.</p>
+<p>The useful part shows up with many qubits together. Ten qubits hold a combination of about a thousand states at once. Fifty qubits hold a quadrillion. The space doubles with every qubit added.</p>
+<p>The link to chemistry is the whole point. A molecule is hard to simulate on a normal computer because its quantum state also grows exponentially with the number of electrons. A quantum computer grows the same way because it is also quantum. So simulating molecules is what these machines are naturally built for. Feynman said this in 1981. If you want to simulate nature, and nature is quantum, build the computer out of quantum parts.</p>
+<h2>Quantum computing is not one job</h2>
+<p>It is easy to assume quantum computing research means building the physical machine. It is really a stack of different jobs.</p>
+<ul>
+<li><strong>Hardware.</strong> Building the physical qubits. Cooling circuits to near absolute zero, or trapping single atoms with lasers. This is physics and electrical engineering.</li>
+<li><strong>Error correction.</strong> Today's qubits are too noisy to trust, so many are combined into one reliable qubit. This is the hardest problem in the field right now. In late 2024 Google showed errors can go down as more qubits are added, which was a real milestone.</li>
+<li><strong>Algorithms.</strong> The math of what a quantum computer would compute. For chemistry this means methods like VQE that estimate a molecule's energy.</li>
+<li><strong>Applications.</strong> Pointing those algorithms at real problems: chemistry, drug discovery, materials. This is the top of the stack, far from the hardware. This is where a chemist works.</li>
+</ul>
+<p>The well-known names are spread across these layers. Some build atoms and circuits. Some prove theorems. The chemistry work sits at the top and never touches the refrigerator.</p>
+<h2>Where it stands for drug discovery</h2>
+<p>Not far yet.</p>
+<ul>
+<li>Google ran a real chemistry simulation on a quantum computer in 2020, but the molecule was one a laptop handles instantly.</li>
+<li>Pharma is already paying in. Boehringer Ingelheim works with Google. Roche worked with a quantum company on an Alzheimer's problem. Merck, Pfizer, and AstraZeneca all have small quantum teams. Startups like Qubit Pharmaceuticals are built entirely around it.</li>
+<li>No quantum computer has found a real drug or beaten the standard classical methods on a real drug-sized molecule. Not yet.</li>
+</ul>
+<p>The useful signal is that pharma is building these teams before the technology is ready. They are paying now to have people in place for when it works. The job barely exists, and it is already forming.</p>
+<h2>How to treat it</h2>
+<p>The PhD goes into computational chemistry and molecular simulation, not quantum computing. The hardware and theory path belongs to physicists. The classical methods are where something real can be built in the next ten years.</p>
+<p>Quantum computing is something to learn well, not to research. Learning it well means more than reading the news. The bar is being able to read a paper that claims a quantum computer beat a classical method on some molecule and judge whether that is real or dressed up. That takes a little hands-on once, like running a small energy calculation, not years of it.</p>
+<p>It also helps not to wall it off. A PhD in a department where people already work on quantum chemistry on quantum computers means picking it up by being near them, without it becoming the thesis.</p>
+<h2>Why this fits a chemist and chemical engineer</h2>
+<p>The aim is to be both a chemist and a chemical engineer. The chemist understands the molecule. The engineer builds and scales the system around it. Quantum computing fits that pair, because the hard part is not only the physics of the machine. It is knowing which chemistry problem is worth pointing it at, and how to build a real pipeline around the answer.</p>
+<p>Quantum computing researchers usually do not have a feel for drug discovery. Drug discovery people usually cannot read the quantum work. The opening is in the middle: deep classical chemistry, real domain sense, and enough quantum literacy to see the moment it becomes useful. The aim is to be ready to use quantum computing for chemistry when it works, not to build the machine.</p></div>
+</div>
+    </div>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      Jonas Choi &middot; Columbia University &middot; Built June 27, 2026
+    </div>
+  </footer>
+</body>
+</html>
