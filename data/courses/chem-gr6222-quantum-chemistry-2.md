@@ -1,8 +1,8 @@
-# CHEM GR6222 / APMA E4200 — Quantum Chemistry II or Partial Differential Equations
+# CHEM GR6222 — Quantum Chemistry II
 
 **Status:** planned
 **Semester:** Semester VIII
-**Credits:** 3
+**Credits:** 2.5
 **Fulfills:** Chemical Physics Major
 **Grade:**
 
@@ -10,32 +10,21 @@
 
 ## Why This Course Matters
 
-Undecided Sem VIII slot — one 3-credit course, two candidates:
+Graduate-level (GR) continuation of CHEM GU4221. Replaces PHYS GU4022 Quantum
+Mechanics II. Carries the electronic-structure foundation forward into post-Hartree–Fock
+and correlation methods — the machinery underneath the quantum-chemistry codes used in
+computational drug discovery.
 
-- **CHEM GR6222 — Quantum Chemistry II (graduate):** advanced electronic structure,
-  post-Hartree–Fock and correlation methods. Deep, but narrow for the simulation / ML /
-  platform path, and the kind of thing typically learned in grad school anyway.
-- **APMA E4200 — Partial Differential Equations:** the mathematical-methods foundation
-  (separation of variables, Fourier and Laplace transforms, the standard physical PDEs)
-  that quantum, stat mech, transport, and E&M all rest on. Grad school assumes it and
-  won't reteach it.
-
-Current lean is PDE: it is the more foundational, less-replaceable-later course. Quantum
-Chemistry II can be picked up in a PhD; PDE is the foundation to lock in. Taken in Sem VIII
-it works as grad-school prep and as a capstone tying together the Schrödinger equation
-(quantum chem), the wave equation (E&M), and diffusion (stat mech) already seen. Both are
-3 credits, so the slot is 3 either way.
+Open items to confirm with the DUS / bulletin: that this graduate course counts toward
+the undergraduate Chemical Physics major, and that GU4221 is the only prerequisite.
 
 ---
 
 ## Log
 
-### 2026-06-29 — Slot left open
-Kept as a Quantum Chemistry II / PDE choice pending final decision. Leaning PDE, on the
-grounds that it is the foundational, not-taught-later course.
-
 ### 2026-06-25 — Plan Restructure
-Originally added as CHEM GR6222 to replace PHYS GU4022.
+Added to replace PHYS GU4022. See semester restructure prompted by the Orgo
+co-registration policy.
 
 ---
 
