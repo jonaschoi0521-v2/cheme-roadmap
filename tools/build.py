@@ -88,7 +88,7 @@ def classify_subject(title: str) -> str:
     code = title.split()[0].upper() if title else ""
     if code in ("MATH", "APMA"):
         return "Mathematics"
-    elif code == "CHEM":
+    elif code in ("CHEM", "CHAP"):
         return "Chemistry"
     elif code == "PHYS":
         return "Physics"
